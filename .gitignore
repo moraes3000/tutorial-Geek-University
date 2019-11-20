@@ -1,0 +1,6 @@
+*.squite3
+*.cfg
+*.exe
+venv
+*.xml
+.idea
