@@ -1,10 +1,8 @@
 .env
 .idéia
 virtual
-* .sqlite3
-* pyc
-__pycache__
-venv
+*.sqlite3
+.venv
 __pycache__
 *.*~
 *.pyc
