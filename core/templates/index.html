@@ -1,10 +1,45 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
 </head>
 <body>
 <h1>BATATA</h1>
+<img src="{% static 'img/logo.jpg' %}">
+<table>
+    <thead>
+    <tr>
+        <th>nome</th>
+        <th>preco</th>
+        <th>estoque</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for p in produtos %}
+            <tr>
+                <td><a href="{% url 'produto' p.id %}"> {{p.nome}}</a></td>
+                <td>{{p.preco}}</td>
+                <td>{{p.estoque}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    for(i=0;i<5;i++){
+         alert("Bia Ti amo " + i);
+    }
+
+}
+
+</script>
+
 </body>
 </html>
